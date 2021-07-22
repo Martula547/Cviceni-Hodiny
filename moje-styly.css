@@ -19,6 +19,25 @@
 @keyframes blikani {
 	50% { opacity: 0;}
 }
+/*.digitalni__dvojtecka {
+	animation: blikani 1s linear infinite;
+}*/
 .digitalni__dvojtecka {
 	animation: blikani 1s linear infinite;
+	animation-timing-function: steps (1, end) 
+}
+
+@keyframes vterinova {
+0% {transform: rotate(0deg);
+	background: red;
+	opacity: 0;
+}
+100% {
+transform: rotate(360deg);
+background: red;
+opacity: 0;
+}
+
+.analogove__vterinova {
+	animation: vterinova 1s linear infinite;
 }
