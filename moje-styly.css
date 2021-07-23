@@ -56,6 +56,7 @@
 }
 .analogove__vterinova {
 	animation: toceni 60s infinite linear;
+	animation-timing-function: steps(60, end);
 }
 
 
