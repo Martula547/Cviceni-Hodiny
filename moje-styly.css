@@ -17,8 +17,20 @@
 }
 
 @keyframes blikani {
-	50% { opacity: 0;}
+	0% {
+		 opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
 }
+/*keyframes blikani {
+	50% {
+		opacity: 0;
+	}
 /*.digitalni__dvojtecka {
 	animation: blikani 1s linear infinite;
 }*/
@@ -26,18 +38,50 @@
 	animation: blikani 1s linear infinite;
 	animation-timing-function: steps (1, end) 
 }
+/*blikani bez prolínání*/
 
+@keyframes toceni {
+	0% {
+	transform: rotate(0deg);
+	}
+	100%  {
+	transform: rotate(360deg);	
+	}
+}
+.analogove__hodinova {
+	animation: toceni (60s *60 * 12) infinite linear;
+}
+.analogove__minutova {
+	animation: toceni calc (60s * 60) infinite linear;
+}
+.analogove__vterinova {
+	animation: toceni 60s infinite linear;
+}
+
+
+
+
+/*
 @keyframes vterinova {
 0% {transform: rotate(0deg);
 	background: red;
-	opacity: 0;
 }
 100% {
 transform: rotate(360deg);
 background: red;
-opacity: 0;
-}
-
+}}
 .analogove__vterinova {
-	animation: vterinova 1s linear infinite;
+	animation: vterinova 2s linear infinite;
 }
+@keyframes minutova {
+	0% {transform: rotate(0deg);
+		background: black;
+	}
+	100% {
+	transform: rotate(360deg);
+	background: black;
+	}}
+	.analogove__minutova {
+		animation: minutova 1s linear infinite;
+	}
+*/
